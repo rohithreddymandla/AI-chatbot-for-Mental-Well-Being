@@ -1,0 +1,28 @@
+.navbar {
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar img {
+    height: 30px;
+    margin-right: 10px;
+    display: inline;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+    display: inline;
+}
+
+
+body {
+    background-color: rgb(250, 220, 139);
+}
+
+
+.card {
+    margin-bottom: 20px;
+}

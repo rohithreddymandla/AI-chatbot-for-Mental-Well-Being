@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title> Mental wellness  </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/index_css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/index_css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/index_css/responsive.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="static/index_images/blue-backgroud.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container mt-4">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              <h2 style="padding-top: 0px; padding-left: 90px; font-family: cursive;"><b>iFriend - your mental wellness companion</b></h2>
+ 
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+              </li>
+              {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('chat') }}">Chat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('phq9') }}">PHQ9</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('nearby_places') }}">help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('wellness') }}">Recreation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout"> <i class="fa fa-user pr-1" aria-hidden="true"></i>Logout</a>
+                </li>
+              {% else %}
+                <!-- <div class="navbar_right"> -->
+                 <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('userLogin') }}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('userRegistration') }}">Registration</a>
+                  </li>
+                <!-- </div> -->
+              {% endif %}
+            
+            </ul>
+          </div>
+        </nav>
+      </div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category,message in messages %}
+              <div class="alert alert-{{ category}} mt-3">
+              {{ message }}
+              </div>
+
+          {% endfor %}
+      {% endif %}
+      
+      {% endwith %}
+          
+                
+                
+
+            
+                
+
+            
+          
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+        <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h5 style="color: black; font-weight: bold;padding-top: 50px;">
+                      According to WHO, mental health is a state of mental well-being that enables people to cope with the stresses of life, realize their abilities, learn well and work well, and contribute to their community. It is an integral component of health and well-being that underpins our individual and collective abilities to make decisions, build relationships and shape the  <h5 style="padding-top: 25px;color: black; font-weight: bold;">world we live in. Mental health is a basic human right. And it is crucial to personal, community and socio-economic development.</h5>                    </h5>
+                
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="static/index_images/mental-brain-flowers.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          
+            <span><h2 style="color: rgb(1, 1, 92);">Some common Mental illnesses</h2></span>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/anxietydisorder.jpeg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Anxiety disorders
+                </h5>
+                <p>
+                  Anxiety disorders are characterised by excessive fear and worry and related behavioural disturbances. Symptoms are severe enough to result in significant distress or significant impairment in functioning. 
+                  There are several different kinds of anxiety disorders, such as: generalised anxiety disorder (characterised by excessive worry), panic disorder (characterised by panic attacks), social anxiety disorder (characterised by excessive fear and worry in social situations), separation anxiety disorder (characterised by excessive fear or anxiety about separation from those individuals to whom the person has a deep emotional bond), and others.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/depression.jpeg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Depression
+                </h5>
+                <p>
+                  Depression is different from usual mood fluctuations and short-lived emotional responses to challenges in everyday life.  During a depressive episode, the person experiences depressed mood (feeling sad, irritable, empty) or a loss of pleasure or interest in activities, for most of the day, nearly every day, for at least two weeks. 
+                  Several other symptoms are also present, which may include poor concentration, feelings of excessive guilt or low self-worth, hopelessness about the future, thoughts about dying or suicide, disrupted sleep, changes in appetite or weight, and feeling especially tired or low in energy. People with depression are at an increased risk of suicide.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/bipolar.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Bipolar disorder
+                </h5>
+                <p>
+                  People with bipolar disorder experience alternating depressive episodes with periods of manic symptoms.  During a depressive episode, the person experiences depressed mood (feeling sad, irritable, empty) or a loss of pleasure or interest in activities, for most of the day, nearly every day. 
+                   Manic symptoms may include euphoria or irritability, increased activity or energy, and other symptoms such as increased talkativeness, racing thoughts, increased self-esteem, decreased need for sleep, distractibility, and impulsive reckless behaviour.  People with bipolar disorder are at an increased risk of suicide.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/ptsd.webp" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Post-Traumatic Stress Disorder (PTSD)
+                </h5>
+                <p>
+                  PTSD may develop following exposure to an extremely threatening or horrific event or series of events. 
+                  It is characterised by all of the following: <br> 1. re-experiencing the traumatic event or events in the present (intrusive memories, flashbacks, or nightmares);<br> 2. avoidance of thoughts and memories of the event(s), or avoidance of activities, situations, or people reminiscent of the event.<br>3. persistent perceptions of heightened current threat.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/schizophrenia.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Schizophrenia
+                </h5>
+                <p>
+                  Schizophrenia is characterised by significant impairments in perception and changes in behaviour.  Symptoms may include persistent delusions, hallucinations, disorganised thinking, highly disorganised behaviour, or extreme agitation.  
+                  People with schizophrenia may experience persistent difficulties with their cognitive functioning.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/index_images/eatingdisorders.webp" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Eating Disorders
+                </h5>
+                <p>
+                  Eating disorders, such as anorexia nervosa and bulimia nervosa, involve abnormal eating and preoccupation with food as well as prominent body weight and shape concerns.
+                  The symptoms or behaviours result in significant risk or damage to health, significant distress, or significant impairment of functioning. Anorexia nervosa often has its onset during adolescence or early adulthood and is associated with premature death due to medical complications or suicide.  Individuals with bulimia nervosa are at a significantly increased risk for substance use, suicidality, and health complications. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding" style="background-color: rgb(166, 252, 240);">
+    <div class="container" >
+      <div class="heading_container heading_center">
+        <span>
+        <h2 style="color: rgb(78, 10, 10);">
+          Why Us
+        </h2></span>
+      </div>
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="static/index_images/ai-icon.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              AI powered chatbot
+            </h5>
+            <p>
+             
+Meet iFriend, your supportive AI companion for mental well-being! iFriend listens without judgment, offering personalized support and practical tools like mood trackers and guided meditations. As a motivational coach, mindfulness buddy, and creativity spark, iFriend cheers you on and helps manage stress. It's not a replacement for professional help but complements your mental health routine. Confidential, accessible 24/7, and easy to use, iFriend is here to support you anytime, anywhere. 
+Sign up on the website and start chatting online for happiness and well-being!    </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="static/index_images/clinic-icom.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Find nearby mental health professionals 
+            </h5>
+            <p>
+              Discover top-notch mental health professionals with iFriend! Our website helps you find qualified experts in your area for counseling and therapy. 
+              We prioritize your well-being by connecting you to trustworthy professionals who can offer the support you need. Make informed choices for your mental health journey.    </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="static/index_images/survey-icon.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Standard assessment
+            </h5>
+            <p>
+              Take control of your mental well-being with iFriend's PHQ-9 assessment! Our website offers this clinically validated tool to help you understand and track your depression symptoms. Answer a few questions confidentially, and iFriend provides calculated insights. It's a convenient way to gauge your mental health and make informed decisions.
+               Visit our website to access the PHQ-9 assessment, empowering yourself on your journey to emotional wellness.  </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="static/index_images/emergency-icon.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Crisis management 
+            </h5>
+            <p>
+              iFriend ensures your safety by notifying emergency contacts via email if any indications of self-harm or harm towards others are detected. Your well-being is our priority, and we take proactive measures to keep your support network informed during challenging times.
+               Trust iFriend to provide an extra layer of care, offering peace of mind to you and your loved ones.
+
+
+
+
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        <!-- &copy;-->  <h5>All Rights Reserved By Team 02 - CS-DS</h5>
+        <b><span id="displayYear"></span></b>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+   <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="../static/index_js/custom.js"></script>
+  <script type="text/javascript" src="/jquery/jquery-3.6.0.min.js">
+  </script>
+
+  
+
+</body>
+
+</html>

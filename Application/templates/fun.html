@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Categories</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #fcf8c0; 
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-body {
+      height: 220px; 
+      overflow: hidden; 
+    }
+
+    .card-img-top {
+        height: 240px;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+    <h2 style="text-align: center; margin-top: 40px; margin-bottom: 40px;">Activities to keep your mind relaxed and have fun !! <a class="nav-link" href="{{ url_for('home') }}" style="float: right; color: black; font-weight: bold; margin-right: 40px;"> <img src="../static/images/home.png" width="30px"></a>
+    </h2>
+    
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="../static/images/games.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Game Haven</h5>
+                <p class="card-text">Engaging in games can provide a much-needed escape and serve as a therapeutic tool to alleviate stress, boost mood, and foster a sense of accomplishment, offering a refreshing way to nurture mental well-being.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">
+                  <a href="https://www.silvergames.com/en/t/stress-relief" target="_blank" style="color: white; ">Open</a>
+                </button>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" style="width: 260px;" src="../static/images/paint.avif" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Color vibe</h5>
+                <p class="card-text">Unleash your creativity and paint your worries away, as the vibrant hues on canvas offer a therapeutic escape for the mind and soul.</p>
+              </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary">
+                      <a href="https://coloringbook.pics/" target="_blank" style="color: white; ">Open</a>
+                    </button>
+                  </div>         
+              </div>
+            </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="../static/images/breathing" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Blissful breath</h5>
+                <p class="card-text">Embrace the transformative power of meditation and mindful breathing to nurture your mental well-being and discover inner peace amidst life's challenges.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">
+                    <a href="https://www.healthline.com/health/breathing-exercise" target="_blank" style="color: white; ">Website</a>
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    <a href="https://www.youtube.com/watch?v=3BPIBxe6mVs" target="_blank" style="color: white; ">Guidance Video</a>
+                  </button>
+              </div>
+              
+            </div>
+          </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="../static/images/cortisol.jpeg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Anti-cortisol</h5>
+                  <p class="card-text">Understanding the detrimental effects of cortisol on the body's stress response, while embracing the therapeutic potential of 741 Hz music to alleviate mental health concerns and promote relaxation and well-being.</p>
+                </div> 
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary">
+                    <a href="https://my.clevelandclinic.org/health/articles/22187-cortisol" target="_blank" style="color: white; ">Learn more</a>
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    <a href="https://www.youtube.com/watch?v=GDKIFp9PeSw" target="_blank" style="color: white; ">Music</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="../static/images/rain.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Rain Symphony</h5>
+                  <p class="card-text">Listening to the serene symphony of rain sounds intertwining with the rustling of leaves in a forest melody can offer a therapeutic escape, soothing the mind and fostering mental well-being.</p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary">
+                    <a href="https://youtu.be/o8GrqUSdzi0?si=ezHVAwUDhTn8vXm7" target="_blank" style="color: white; ">Open</a>
+                  </button>
+                </div>           
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="../static/images/incense.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Whispers of aroma</h5>
+                  <p class="card-text">Immersing oneself in the fragrant allure of incense ASMR videos creates a multisensory experience, fostering tranquility and aiding mental well-being through the therapeutic art of relaxation.</p>
+                </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">
+                    <a href="https://www.youtube.com/watch?v=1-Kl9HKUC-o" target="_blank" style="color: white; ">Open</a>
+                  </button>
+               </div>            
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="../static/images/sea.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Calm waters</h5>
+                  <p class="card-text">Dive into the tranquil depths of sea life accompanied by soothing melodies, drifting away on a journey of serenity and relaxation.</p>
+                </div>
+ 
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">
+                  <a href="https://youtu.be/eoTpdTU8nTA?si=3bCEKrqo9nwJUqUX" target="_blank" style="color: white; ">Open</a>
+                </button>
+            </div>           
+          </div>
+          </div>
+
+      </div>
+    </div>
+        
+       
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

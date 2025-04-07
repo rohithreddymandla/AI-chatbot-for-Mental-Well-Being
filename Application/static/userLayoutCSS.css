@@ -1,0 +1,14 @@
+.navbar {
+    background-color: rgb(219, 250, 184);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar h1 {
+    color: rgb(12, 12, 12);
+    font-size: 24px;
+    display: inline;
+}
+
+    
