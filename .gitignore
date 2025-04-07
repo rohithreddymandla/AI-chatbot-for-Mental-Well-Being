@@ -5,4 +5,6 @@ bert_classifier_2.pth
 .env
 *.env
 __pycache__/
-Application/routes.pyc
+Application/routes.py
+Application/__pycache__/routes.cpython-312.pyc
+Application/__pycache__/routes.cpython-313.pyc
